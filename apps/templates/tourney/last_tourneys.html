@@ -1,0 +1,19 @@
+<!-- TITLE -->
+<div class="title">
+    <h2>Ближайшие турниры</h2>
+</div>
+
+<!-- NEXT TOURNAMENTS LIST -->
+<ul class="tournaments">
+    {% for tournament in tournaments %}
+        <li>
+            <a target="_blank" href="{{ tournament.url }}" class="tournaments-body">
+                <span class="tournaments-logo"><i class="icons icons-{{ tournament.game_name|lower }}"></i></span>
+                <h3>{{ tournament.name }}</h3>
+                <span class="date"><i class="icon-calendar"></i>{{ tournament.time|date:"d.m.Y" }}</span>
+                <span class="time"><i class="icon-clock"></i>{{ tournament.time|date:"H:i" }} (MSK)</span>
+            </a>
+            <div class="clear"></div>
+        </li>
+    {% endfor %}
+</ul>

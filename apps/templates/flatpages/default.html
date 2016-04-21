@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+{% load staticfiles flatpages %}
+
+{% block main %}
+
+<section class="section">
+          <div class="container-fluid">
+          <!-- BREADCRUMB -->
+              <div class="row">
+                  <div class="col-md-12">
+
+                      <ol class="breadcrumb">
+                          <li><a href="/">Главная</a></li>
+                          <li class="active">{{ flatpage.title }}</li>
+                      </ol>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-8">
+
+                      <!-- CONTENT TITLE -->
+                      <div class="title">
+                          <h1>{{ flatpage.title }}</h1>
+                      </div>
+
+                      <!-- RULES-->
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs" role="tablist">
+                          <li role="presentation" class="active"><a href="#regulations" aria-controls="regulations" role="tab" data-toggle="tab" aria-expanded="true">Регламент</a></li>
+                          <li role="presentation" class=""><a href="#state" aria-controls="state" role="tab" data-toggle="tab" aria-expanded="false">Положение</a></li>
+                          <li role="presentation" class=""><a href="#tech_rule" aria-controls="tech_rule" role="tab" data-toggle="tab" aria-expanded="false">Технические правила</a></li>
+                      </ul>
+
+                      <!-- Tab panes -->
+                      <div class="tab-content">
+                          <!-- ONLINE GAMES -->
+                          <div role="tabpanel" class="tab-pane active in" id="regulations">
+                              <!-- SOME CONTENT -->
+                              <article>
+                                  {{ flatpage.content }}
+                                  <p>Представители Федерации компьютерного спорта России провели в Казани круглый стол с различными представителями и деятелями киберспорта региона. Встреча была посвящена обсуждению деятельности ФКС России и работе регионального отделения. Также были озвучены перспективы участия студентов вузов Татарстана во Всероссийской студенческой лиге</p>
+
+                                  <img src="{% static 'img/media.jpg' %}" alt="" class="news-baner">
+
+                                  <p>Представители ФКС России пообщались с игроками, студентами местных учебных заведений и деятелями различных киберспортивных организаций в неформальной обстановке, а также посетили компьютерные клубы города «ArtCore», «Снайпер» и «BattleHall».</p>
+                                  <p>На встречу в пресс-центр «it-Park» 29 февраля пришли представители игрового сообщества Казани - владельцы компьютерных клубов, студенты, представители бизнес-структур города, игроки различных дисциплин и организаторы турниров. Затем, представители ФКС посетили студенческие профкомы в ряде вузов города Казани, а так же посетили лабораторию, на базе кафедры ВМК КФУ, в которой, разрабатывают игры и активно участвуют в развитии киберспорта.</p>
+                              </article>
+
+                          </div>
+                          <div role="tabpanel" class="tab-pane fade" id="state">
+                              <!-- SOME CONTENT -->
+                              <article>
+                                  <h2>Поздравляем команду Virtus.pro с выходом в финал Кубка России!</h2>
+
+                                  <img src="{% static 'img/media.jpg' %}" alt="" class="news-baner">
+
+                                  <p>Представители Федерации компьютерного спорта России провели в Казани круглый стол с различными представителями и деятелями киберспорта региона. Встреча была посвящена обсуждению деятельности ФКС России и работе регионального отделения. Также были озвучены перспективы участия студентов вузов Татарстана во Всероссийской студенческой лиге</p>
+                                  <p>Представители ФКС России пообщались с игроками, студентами местных учебных заведений и деятелями различных киберспортивных организаций в неформальной обстановке, а также посетили компьютерные клубы города «ArtCore», «Снайпер» и «BattleHall».</p>
+                                  <p>На встречу в пресс-центр «it-Park» 29 февраля пришли представители игрового сообщества Казани - владельцы компьютерных клубов, студенты, представители бизнес-структур города, игроки различных дисциплин и организаторы турниров. Затем, представители ФКС посетили студенческие профкомы в ряде вузов города Казани, а так же посетили лабораторию, на базе кафедры ВМК КФУ, в которой, разрабатывают игры и активно участвуют в развитии киберспорта.</p>
+                              </article>
+                          </div>
+                          <div role="tabpanel" class="tab-pane fade" id="tech_rule">
+                              <!-- SOME CONTENT -->
+                              <article>
+                                  <h2>Поздравляем команду Virtus.pro с выходом в финал Кубка России!</h2>
+
+                                  <img src="{% static 'img/media.jpg' %}" alt="" class="news-baner">
+
+                                  <p>Представители Федерации компьютерного спорта России провели в Казани круглый стол с различными представителями и деятелями киберспорта региона. Встреча была посвящена обсуждению деятельности ФКС России и работе регионального отделения. Также были озвучены перспективы участия студентов вузов Татарстана во Всероссийской студенческой лиге</p>
+                                  <p>Представители ФКС России пообщались с игроками, студентами местных учебных заведений и деятелями различных киберспортивных организаций в неформальной обстановке, а также посетили компьютерные клубы города «ArtCore», «Снайпер» и «BattleHall».</p>
+                                  <p>На встречу в пресс-центр «it-Park» 29 февраля пришли представители игрового сообщества Казани - владельцы компьютерных клубов, студенты, представители бизнес-структур города, игроки различных дисциплин и организаторы турниров. Затем, представители ФКС посетили студенческие профкомы в ряде вузов города Казани, а так же посетили лабораторию, на базе кафедры ВМК КФУ, в которой, разрабатывают игры и активно участвуют в развитии киберспорта.</p>
+                              </article>
+                          </div>
+                          <div class="clear"></div>
+                      </div>
+                  </div><!-- col -->
+                  <div class="col-md-4">
+
+                  <!-- SIDE BAR -->
+                      <!-- TITLE -->
+                      <div class="title">
+                          <h2>Ближайшие турниры</h2>
+                      </div>
+
+                      <!-- NEXT TOURNAMENTS LIST -->
+                      <ul class="tournaments">
+                          <li>
+                              <span class="tournaments-logo"><i class="icons icons-dota2"></i></span>
+                              <span class="tournaments-body">
+                                  <h3>eurasia cyber sport 2016</h3>
+                                  <span class="date"><i class="icon-calendar"></i>29.01.2016(MSK)</span>
+                                  <span class="time"><i class="icon-clock"></i>10:00</span>
+                              </span>
+                              <div class="clear"></div>
+                          </li>
+                          <li>
+                              <span class="tournaments-logo"><i class="icons icons-legends"></i></span>
+                              <span class="tournaments-body">
+                                  <h3>eurasia cyber sport 2016</h3>
+                                  <span class="date"><i class="icon-calendar"></i>29.01.2016(MSK)</span>
+                                  <span class="time"><i class="icon-clock"></i><span class="label label-live">Live</span></span>
+                              </span>
+                              <div class="clear"></div>
+                          </li>
+                          <li>
+                              <span class="tournaments-logo"><i class="icons icons-tanks"></i></span>
+                              <span class="tournaments-body">
+                                  <h3>eurasia cyber sport 2016</h3>
+                                  <span class="date"><i class="icon-calendar"></i>29.01.2016(MSK)</span>
+                                  <span class="time"><i class="icon-clock"></i>10:00</span>
+                              </span>
+                              <div class="clear"></div>
+                          </li>
+                          <li>
+                              <span class="tournaments-logo"><i class="icons icons-tanks"></i></span>
+                              <span class="tournaments-body">
+                                  <h3>eurasia cyber sport 2016</h3>
+                                  <span class="date"><i class="icon-calendar"></i>29.01.2016(MSK)</span>
+                                  <span class="time"><i class="icon-clock"></i>10:00</span>
+                              </span>
+                              <div class="clear"></div>
+                          </li>
+                          <li>
+                              <span class="tournaments-logo"><i class="icons icons-rpml"></i></span>
+                              <span class="tournaments-body">
+                                  <h3>eurasia cyber sport 2016</h3>
+                                  <span class="date"><i class="icon-calendar"></i>29.01.2016(MSK)</span>
+                                  <span class="time"><i class="icon-clock"></i>10:00</span>
+                              </span>
+                              <div class="clear"></div>
+                          </li>
+                          <li>
+                              <span class="tournaments-logo"><i class="icons icons-dota2"></i></span>
+                              <span class="tournaments-body">
+                                  <h3>eurasia cyber sport 2016</h3>
+                                  <span class="date"><i class="icon-calendar"></i>29.01.2016(MSK)</span>
+                                  <span class="time"><i class="icon-clock"></i>10:00</span>
+                              </span>
+                              <div class="clear"></div>
+                          </li>
+                      </ul>
+
+                      <!-- TITLE -->
+                      <div class="title">
+                          <h2>Наши Партнеры</h2>
+                      </div>
+
+                      <!--  PARTNERS LIST -->
+                      <ul class="partners">
+                          <li><a href="http://virtus.pro" target="_blank"><i class="icons icons-virtus"></i></a></li>
+                          <li style="display: none;"><a href="#" target="_blank"><i class="icons icons-gamer"></i></a></li>
+                          <li style="display: none;"><a href="#" target="_blank"><i class="icons icons-cult"></i></a></li>
+                          <li style="display: none;"><a href="#" target="_blank"><i class="icons icons-gooddame"></i></a></li>
+                          <li style="display: none;"><a href="#" target="_blank"><i class="icons icons-sportcom"></i></a></li>
+                      </ul>
+                  </div><!-- col -->
+              </div><!-- row -->
+          </div><!-- container -->
+      </section>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,148 @@
+{% extends 'tourney/base.html' %}
+
+{% load staticfiles %}
+
+{% block main %}
+<!-- CONTENT -->
+
+<section class="section np-b cp" onClick="window.open('http://www.yota.ru');">
+    <div class="container-fluid">
+        <div class="jumbotron" style="background: url('{% static 'img/banner_for_main.png'%}') center center no-repeat;"></div>
+    </div><!-- container -->
+</section>
+
+<section class="section wrapp">
+    <div class="container-fluid">
+    <!-- BREADCRUMB -->
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li><a href="/">Главная</a></li>
+                    <li class="active">Ход турнира</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="row">
+                    <div class="col-md-12">
+                      <!-- MAP FILTER -->
+                      <div class="map-filter">
+                          <span class="attention"><i class="icons-attention"></i>Для перехода в раздел города нажмите на карте</span>
+
+                          <figure>
+                              <img src="{% static 'img/map.png' %}" alt="">
+                              <figcaption>
+                                  {% for city in cities %}
+                                      <a href="{% url 'tournament_city_info' city.short_name %}" class="{{ city.short_name }}">
+                                          <span class="map-pointer"></span>
+                                          <span class="city">{{ city.name }}</span>
+                                      </a>
+                                  {% endfor %}
+                              </figcaption>
+                          </figure>
+
+                          <ul class="list-inline list-ustyled city-list">
+                              {% for city in cities %}
+                                  <li class="city"><a class="btn btn-city" city="{{ city.short_name }}">{{ city.name }}</a></li>
+                              {% endfor %}
+                          </ul>
+                        </div>
+                    </div><!-- col -->
+                </div><!-- row -->
+                {% for tournament_city in tournaments %}
+                    <div class="row online-block" id="online-block-{{ tournament_city.short_name }}" style="display: none;">
+                        <div class="col-md-12">
+                            <div class="title">
+                                <h1>Ход турнира</h1>
+                            </div>
+                        </div>
+                        <!-- CONTENT TITLE -->
+                        <div class="col-md-9">
+
+                            <!-- TOURNAMENTS-->
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#online" aria-controls="online" role="tab" data-toggle="tab">онлайн отборочные</a></li>
+                                <!-- <li role="presentation"><a href="#region" aria-controls="region" role="tab" data-toggle="tab">региональные кубки</a></li> -->
+                                <!-- <li role="presentation"><a href="#russia" aria-controls="russia" role="tab" data-toggle="tab">кубок россии</a></li> -->
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+
+                                <!-- ONLINE GAMES -->
+                                <div role="tabpanel" class="tab-pane active" id="online">
+                                    <!-- GAME LIST -->
+                                    <ul class="tournaments sm-b">
+                                        {% for tournament in tournament_city.tournaments.online_qualifying %}
+                                            <li>
+                                                <a target="_blank" href="{{ tournament.url }}" class="tournaments-body">
+                                                    <span class="tournaments-logo"><i class="icons icons-{{ tournament.game_name|lower }}"></i></span>
+                                                    <h3>{{ tournament.name }}</h3>
+                                                    <span class="date"><i class="icon-calendar"></i>{{ tournament.time|date:"d.m.Y" }}</span>
+                                                    <span class="time"><i class="icon-clock"></i>{{ tournament.time|date:"H:i" }} (MSK)</span>
+                                                </a>
+                                                <div class="clear"></div>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="region">
+                                    {% for tournament in tournament_city.tournaments.region_bowl %}
+                                        <li>
+                                            <a target="_blank" href="{{ tournament.url }}" class="tournaments-body">
+                                                <h3>{{ tournament.name }}</h3>
+                                                <span class="tournaments-logo"><i class="icons icons-{{ tournament.game_name|lower }}"></i></span>
+                                                <span class="date"><i class="icon-calendar"></i>{{ tournament.time|date:"d.m.Y" }}(MSK)</span>
+                                                <span class="time"><i class="icon-clock"></i>{{ tournament.time|date:"H:i" }} (MSK)</span>
+                                            </a>
+                                            <div class="clear"></div>
+                                        </li>
+                                    {% endfor %}
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="russia">
+                                    <!-- GAME LIST -->
+                                    <ul class="tournaments sm-b">
+                                        {% for tournament in tournament_city.tournaments.russian_bowl %}
+                                            <li>
+                                                <a target="_blank" href="{{ tournament.url }}" class="tournaments-body">
+                                                    <h3>{{ tournament.name }}</h3>
+                                                    <span class="tournaments-logo"><i class="icons icons-{{ tournament.game_name|lower }}"></i></span>
+                                                    <span class="date"><i class="icon-calendar"></i>{{ tournament.time|date:"d.m.Y" }}(MSK)</span>
+                                                    <span class="time"><i class="icon-clock"></i>{{ tournament.time|date:"H:i" }} (MSK)</span>
+                                                </a>
+                                                <div class="clear"></div>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div><!-- col -->
+                        <div class="col-md-3">
+                          <div class="title">
+                              <h2>Генеральный партнер</h2>
+                          </div>
+                          <ul class="partners">
+                              <li><a href="http://www.yota.ru/" target="_blank"> <img src="{% static 'img/yota_logo_website.png' %}" alt=""></a></li>
+                          </ul>
+
+                            <!-- TITLE -->
+                            <div class="title">
+                                <h2>Наши Партнеры</h2>
+                            </div>
+
+                            <!--  PARTNERS LIST -->
+                            <ul class="partners">
+                                <li><a href="http://cybersport.ru" target="_blank"> <img src="{% static 'img/cybersport.ru.png' %}" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div><!-- row -->
+                {% endfor %}
+            </div><!-- col -->
+        </div><!-- row -->
+    </div><!-- container -->
+</section>
+{% endblock %}

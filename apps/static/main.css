@@ -1,0 +1,2273 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300&subset=latin,latin-ext);
+@font-face {
+    font-family: 'proxima_nova_rg';
+    src: url('../fonts/mark_simonson_-_proxima_nova_regular-webfont.eot');
+    src: url('../fonts/mark_simonson_-_proxima_nova_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/mark_simonson_-_proxima_nova_regular-webfont.woff2') format('woff2'),
+         url('../fonts/mark_simonson_-_proxima_nova_regular-webfont.woff') format('woff'),
+         url('../fonts/mark_simonson_-_proxima_nova_regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* line 3, ../sass/main.scss */
+/*
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  color: inherit;
+  vertical-align: baseline;
+}
+*/
+/* HTML5 display-role reset for older browsers */
+/* line 25, ../sass/main.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 29, ../sass/main.scss */
+body {
+  line-height: 1.5;
+  background: #181819 url(../img/bg.png) no-repeat top center;
+  background-position: center 5px;
+}
+
+
+/* line 33, ../sass/main.scss */
+/*
+ol, ul {
+  list-style: none;
+}
+*/
+ul .list-unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  color: inherit;
+  vertical-align: baseline;
+}
+ul .list-unstyled li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  color: inherit;
+  vertical-align: baseline;
+}
+/* line 36, ../sass/main.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 39, ../sass/main.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 44, ../sass/main.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/*
+html, body, div, span, let, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+*/
+
+/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/*
+ol, ul {
+  list-style: none;
+}
+*/
+/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* ╨Ш╨╝╨┐╨╛╤А╤В╨╕╤А╤Г╨╡╨╝ ╨│╤Г╨│╨╗-╤И╤А╨╕╤Д╤В╤Л */
+/* ╨Ш╨╝╨┐╨╛╤А╤В╨╕╤А╤Г╨╡╨╝ ╨╗╨╛╨║╨░╨╗╤М╨╜╤Л╨╡ ╤И╤А╨╕╤Д╤В╤Л */
+/* ╨Ю╨┐╤А╨╡╨┤╨╡╨╗╤П╨╡╨╝ ╤И╤А╨╕╤Д╤В╤Л */
+/* ╨и╤А╨╕╤Д╤В╨╛╨▓╤Л╨╣ ╨Ь╨╕╨║╤Б╨╕╨╜ */
+/* ╨Т╨║╨╗╤О╤З╨░╨╡╨╝ ╤Б╨┐╤А╨░╨╣╤В╤Л */
+/* line 112, icons/*.png */
+.icons-sprite, .icons-attention, .icons-dota2, .icons-legends, .icons-logo-small, .icons-reply, .icons-rpml, .icons-shield, .icons-star, .icons-tanks {
+  background-image: url('../img/icons-s10c7450832.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-attention {
+  background-position: 0 0;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-dota2 {
+  background-position: 0 -26px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-legends {
+  background-position: 0 -66px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-logo-small {
+  background-position: 0 -87px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-reply {
+  background-position: 0 -114px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-rpml {
+  background-position: 0 -122px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-shield {
+  background-position: 0 -171px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-star {
+  background-position: 0 -198px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-tanks {
+  background-position: 0 -228px;
+}
+
+/* ╨Я╨╛╨┤╨║╨╗╤О╤З╨░╨╡╨╝ ╨Ш╨║╨╛╨╜╨║╨╕ */
+/* line 85, ../sass/_settings.scss */
+.icons-logo-small {
+  display: inline-block;
+  position: relative;
+  width: 26px;
+  height: 27px;
+  vertical-align: top;
+  display: -moz-inline-stack;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 85, ../sass/_settings.scss */
+.icons-reply {
+  display: inline-block;
+  position: relative;
+  width: 12px;
+  height: 8px;
+  vertical-align: top;
+  display: -moz-inline-stack;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 85, ../sass/_settings.scss */
+.icons-rpml {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 49px;
+  vertical-align: top;
+  display: -moz-inline-stack;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 85, ../sass/_settings.scss */
+.icons-star {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  vertical-align: top;
+  display: -moz-inline-stack;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 85, ../sass/_settings.scss */
+.icons-attention {
+  display: inline-block;
+  position: relative;
+  width: 26px;
+  height: 26px;
+  vertical-align: top;
+  display: -moz-inline-stack;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 85, ../sass/_settings.scss */
+.icons-shield {
+  display: inline-block;
+  position: relative;
+  width: 21px;
+  height: 27px;
+  vertical-align: top;
+  display: -moz-inline-stack;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 85, ../sass/_settings.scss */
+.icons-dota2 {
+  display: inline-block;
+  position: relative;
+  width: 52px;
+  height: 50px;
+  vertical-align: top;
+  display: -moz-inline-stack;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 85, ../sass/_settings.scss */
+.icons-legends {
+  display: inline-block;
+  position: relative;
+  width: 53px;
+  height: 21px;
+  vertical-align: top;
+  display: -moz-inline-stack;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 85, ../sass/_settings.scss */
+.icons-tanks {
+  display: inline-block;
+  position: relative;
+  width: 39px;
+  height: 54px;
+  vertical-align: top;
+  display: -moz-inline-stack;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 128, ../sass/_settings.scss */
+html {
+  /* height hack */
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+
+/* line 135, ../sass/_settings.scss */
+body {
+  /* height hack */
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* ╤Б╨│╨╗╨░╨╢╨╕╨▓╨░╨╜╨╕╨╡ ╤И╤А╨╕╤Д╤В╨╛╨▓ ╨▓ ╨▓╨╡╨▒╨║╨╕╤В╨╡ */
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* line 144, ../sass/_settings.scss */
+.container-fluid {
+  max-width: 1000px;
+  width: 1000px!important;
+  margin: 0 auto;
+}
+
+/* line 145, ../sass/_settings.scss */
+.container-fluid.cf-1400 {
+  max-width: 100%;
+  /* max-width: 1400px; */
+  margin: 0 auto;
+}
+
+/* line 146, ../sass/_settings.scss */
+section {
+  padding: 25px 0;
+}
+
+/* line 147, ../sass/_settings.scss */
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+/* line 148, ../sass/_settings.scss */
+button, select {
+  -webkit-appearance: none;
+}
+
+/* ╨Ю╨▒╤Й╨╕╨╡ ╤Б╤В╨╕╨╗╨╕ ╨┤╨╗╤П ╨║╨░╤А╤В╨╕╨╜╨╛╨║ */
+/* line 152, ../sass/_settings.scss */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* ╨б╤В╨╕╨╗╨╕ ╨║╨░╤А╤В╨╕╨╜╨╛╨║
+----------------
+
+.img-rounded -
+.img-circle -
+.img-thumbnail -
+*/
+/* line 161, ../sass/_settings.scss */
+.img-rounded {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* ╨Ф╨╛╨┐╨╛╨╗╨╜╨╕╤В╨╡╨╗╤М╨╜╤Л╨╡ ╤Б╨╕╤Б╤В╨╡╨╝╨╜╤Л╨╡ ╨║╨╗╨░╤Б╤Б╤Л */
+/* line 165, ../sass/_settings.scss */
+.np {
+  padding: 0;
+}
+
+/* no padding */
+/* line 166, ../sass/_settings.scss */
+.np-l {
+  padding-left: 0;
+}
+
+/* no padding left */
+/* line 167, ../sass/_settings.scss */
+.np-r {
+  padding-right: 0;
+}
+
+/* no padding right */
+/* line 168, ../sass/_settings.scss */
+.np-t {
+  padding-top: 0;
+
+}
+
+/* no padding top */
+/* line 170, ../sass/_settings.scss */
+.dp {
+  padding: 0 30px;
+}
+
+/* double padding */
+/* line 171, ../sass/_settings.scss */
+.nm {
+  margin: 0;
+}
+.section.np-t {padding-top: 0;}
+.section.np-b {padding-bottom: 0;}
+/* no margin */
+/* line 172, ../sass/_settings.scss */
+.nm-b {
+  margin-bottom: 0;
+}
+
+/* no margin bottom */
+/* ╨Ю╤З╨╕╤Й╨╡╨╜╨╕╨╡ ╨╛╨▒╤В╨╡╨║╨░╨╜╨╕╤П */
+/* line 175, ../sass/_settings.scss */
+.clear {
+  clear: both;
+}
+
+/* ╨Ъ╤А╨╛╤Б╤Б╨▒╤А╨░╤Г╨╖╨╡╤А╨╜╤Л╨╣ inline-block */
+/* line 178, ../sass/_settings.scss */
+.inline-block {
+  display: -moz-inline-stack;
+  /*Firefox 2*/
+  display: inline-block;
+  /*╨е╨╛╤А╨╛╤И╨╕╨╡ ╨▒╤А╨░╤Г╨╖╨╡╤А╤Л*/
+  _overflow: hidden;
+  /*IE6, IE7*/
+  *zoom: 1;
+  /*╨▓╨║╨╗╤О╤З╨░╨╡╨╝ hasLayout ╨┤╨╗╤П IE6, IE7*/
+  *display: inline;
+  /*╨┐╤А╨╕ hasLayout true display:inline ╨▓ IE6, IE7 ╨▓╨╡╨┤╤С╤В ╤Б╨╡╨▒╤П ╨║╨░╨║ display:inline-block*/
+}
+
+/* ╨Ю╨▒╤Й╨╕╨╣ ╤Б╨▒╤А╨╛╤Б ╨▒╨░╨╖╨╛╨▓╤Л╤Е ╨╜╨░╤Б╤В╤А╨╛╨╡╨║ */
+/* line 187, ../sass/_settings.scss */
+.navbar-default .navbar-toggle {
+  border: none;
+}
+
+/* ╨б╨╛╨╛╨▒╤Й╨╡╨╜╨╕╨╡ ╨╛╨▒ ╤Г╤Б╤В╨░╤А╨╡╨▓╤И╨╡╨╝ ╨▒╤А╨╛╤Г╨╖╨╡╤А╨╡ */
+/* line 190, ../sass/_settings.scss */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ╨Т ╨┤╨╛╨┐╨╛╨╗╨╜╨╡╨╜╨╕╨╡ ╨╛╤В Bootstrap, <p> (╨┐╨░╤А╨░╨│╤А╨░╤Д╤Л) ╨┐╨╛╨╗╤Г╤З╨░╤О╤В ╨╜╨╕╨╢╨╜╨╕╨╣ ╨╛╤В╤Б╤В╤Г╨┐ ╨▓ ╨┐╨╛╨╗╨╛╨▓╨╕╨╜╤Г ╨║╨░╨╗╤М╨║╤Г╨╗╨╕╤А╤Г╨╡╨╝╨╛╨╣ ╨▓╤Л╤Б╨╛╤В╤Л ╤Б╤В╤А╨╛╨║╨╕ (╨╕╨╖╨╜╨░╤З╨░╨╗╤М╨╜╨╛ 10px) */
+/* line 210, ../sass/_settings.scss */
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: #000;
+  padding-bottom: 10px;
+}
+
+/* <p> ╨▓ ╨▓╨╕╨┤╨╡ ╨╖╨░╨│╨╛╨╗╨╛╨▓╨║╨░ */
+/* ╨б╤В╨╕╨╗╨╕ ╨┤╨╗╤П ╨┐╨░╤А╨░╨│╤А╨░╤Д╨╛╨▓
+----------------
+<p> ╤Б ╨╕╨╖╨╝╨╡╨╜╨╡╨╜╨╜╤Л╨╝ ╤Ж╨▓╨╡╤В╨░ ╤И╤А╨╕╤Д╤В╨░
+.text-muted {}
+.text-primary {}
+.text-success {}
+.text-info {}
+.text-warning {}
+.text-danger {}
+
+<p> ╤Б ╤Д╨╛╨╜╨╛╨▓╤Л╨╝ ╤Ж╨▓╨╡╤В╨╛╨╝ ╨▓ ╤А╨╡╨╢╨╕╨╝╨╡ BLOCK
+.bg-primary {}
+.bg-success {}
+.bg-info {}
+.bg-warning {}
+.bg-danger {}
+
+╨Ш╤Б╨┐╨╛╨╗╤М╨╖╤Г╨╣╤В╨╡ ╤Б╨╕╤Б╤В╨╡╨╝╨╜╤Л╨╡ ╨║╨╗╨░╤Б╤Б╤Л ╨┤╨╗╤П ╨▓╤Л╤А╨░╨▓╨╜╨╕╨▓╨░╨╜╨╕╤П ╤В╨╡╨║╤Б╤В╨░ ╨▓ ╨┐╨░╤А╨░╨│╤А╨░╤Д╨░╤Е
+.text-left {}
+.text-center {}
+.text-right {}
+.text-justify {}
+*/
+/* line 244, ../sass/_settings.scss */
+strong, .strong {
+  font-weight: bold;
+}
+
+/* line 248, ../sass/_settings.scss */
+a, .tournaments li, .tournaments li h3, .arrow-up, header, figcaption {
+  text-decoration: auto;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+/* line 249, ../sass/_settings.scss */
+a:hover, a:focus, a:active, a:active:focus, .tournaments li:hover, .tournaments li:focus, .tournaments li:active, .tournaments li:active:focus, .tournaments li h3:hover, .tournaments li h3:focus, .tournaments li h3:active, .tournaments li h3:active:focus, .arrow-up:hover, .arrow-up:focus, .arrow-up:active, .arrow-up:active:focus, header:hover, header:focus, header:active, header:active:focus, figcaption:hover, figcaption:focus, figcaption:active, figcaption:active:focus {
+  outline: none;
+}
+/* line 253, ../sass/_settings.scss */
+a:hover, .tournaments li:hover, .tournaments li h3:hover, .arrow-up:hover, header:hover, figcaption:hover {
+  color: #00adef;
+}
+
+/* line 257, ../sass/_settings.scss */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+/* line 267, ../sass/_settings.scss */
+h1, .h1 {
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+
+  color: #000;
+}
+
+/* line 271, ../sass/_settings.scss */
+h2, .h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: #000;
+  font-weight: bold;
+}
+@media only screen and (max-width: 481px) {
+  /* line 271, ../sass/_settings.scss */
+  h2, .h2 {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+
+    color: #000;
+  }
+}
+
+/* line 278, ../sass/_settings.scss */
+h3, .h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #000;
+  font-weight: bold;
+}
+
+/* line 282, ../sass/_settings.scss */
+h4, .h4 {
+  font-family: "Lato", sans-serif;
+  font-size: 36px;
+  line-height: 46px;
+
+  color: #fff;
+}
+@media only screen and (max-width: 481px) {
+  /* line 282, ../sass/_settings.scss */
+  h4, .h4 {
+    font-family: "Lato", sans-serif;
+    font-size: 26px;
+    line-height: 36px;
+
+    color: #fff;
+  }
+}
+
+/* line 295, ../sass/_settings.scss */
+.lead {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #fff;
+}
+
+/* line 299, ../sass/_settings.scss */
+.status {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #000;
+}
+/* line 300, ../sass/_settings.scss */
+.status strong {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 301, ../sass/_settings.scss */
+.status i {
+  font-size: 18px;
+  padding-right: 5px;
+}
+/* line 303, ../sass/_settings.scss */
+.status.approwed {
+  color: #00adef;
+}
+/* line 304, ../sass/_settings.scss */
+.status.approwed strong {
+  color: #00adef;
+}
+
+/* line 308, ../sass/_settings.scss */
+.attention {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #1b1b1b;
+}
+/* line 308, ../sass/_settings.scss */
+.attention i {
+  margin-right: 10px;
+}
+
+/* address */
+/* line 311, ../sass/_settings.scss */
+address, .address {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #8b8b8b;
+}
+/* line 313, ../sass/_settings.scss */
+address strong, .address strong {
+  font-weight: bold;
+  color: #000;
+}
+
+/* ╨Ф╨╗╤П ╤А╨░╤Б╤И╨╕╤А╨╡╨╜╨╕╤П ╤В╨╡╨║╤Б╤В╨░ ╨┐╤А╨╕ ╨┤╨╗╨╕╤В╨╡╨╗╤М╨╜╨╛╨╝ ╨╜╨░╨▓╨╡╨┤╨╡╨╜╨╕╨╕ ╨╜╨░ ╨░╨▒╨▒╤А╨╡╨▓╨╕╨░╤В╤Г╤А╤Г, ╨▓╨║╨╗╤О╤З╨╕╤В╨╡ ╨░╤В╤А╨╕╨▒╤Г╤В title="" ╨▓╨╜╤Г╤В╤А╨╕ <abbr>.
+   ╨Ф╨╛╨▒╨░╨▓╤М╤В╨╡ .initialism ╨║ ╨░╨▒╨▒╤А╨╡╨▓╨╕╨░╤В╤Г╤А╨╡ ╨┤╨╗╤П ╨╗╨╡╨│╨║╨╛╨│╨╛ ╤Г╨╝╨╡╨╜╤М╤И╨╡╨╜╨╕╤П ╤А╨░╨╖╨╝╨╡╤А╨░ ╤И╤А╨╕╤Д╤В╨░. */
+/* ╨Ф╨╛╨▒╨░╨▓╤М╤В╨╡ .blockquote-reverse ╨┤╨╗╤П ╨▓╤Л╤А╨░╨▓╨╜╨╕╨▓╨░╨╜╨╕╤П ╤Ж╨╕╤В╨░╤В╤Л ╤Б╨┐╤А╨░╨▓╨░. */
+/* line 324, ../sass/_settings.scss */
+blockquote {
+  /* ╨Т╤Б╨╡╨│╨┤╨░ ╨▓╤Б╤В╨░╨▓╨╗╤П╨╣╤В╨╡ ╨▓ ╤Ж╨╕╤В╨░╤В╤Г <p> */
+  /* <cite title="Source Title">Source Title</cite> */
+}
+
+/* line 336, ../sass/_settings.scss */
+.label-default {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #000;
+  padding: 10px 15px;
+  background: #ededed;
+  text-transform: uppercase;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* line 340, ../sass/_settings.scss */
+.label-live {
+  background: #00ff7b;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: #fff;
+  padding: 5px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* line 344, ../sass/_settings.scss */
+.date {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: #666;
+  padding: 0 10px;
+}
+
+/* ╨Ф╨╗╤П ╤Г╨┤╨░╨╗╨╡╨╜╨╕╤П ╨╛╤В╤Б╤В╤Г╨┐╨╛╨▓ ╨╕╨╖ ╤Б╨┐╨╕╤Б╨║╨░ ╨╕╤Б╨┐╨╛╨╗╤М╨╖╤Г╨╡╨╝ .list-unstyled
+   ╨Ф╨╗╤П ╨▓╤Л╤А╨░╨▓╨╜╨╕╨▓╨░╨╜╨╕╤П ╨▓ ╤Б╤В╤А╨╛╤З╨║╤Г ╨╕╤Б╨┐╨╛╨╗╤М╨╖╤Г╨╡╨╝ .list-inline */
+/* line 350, ../sass/_settings.scss */
+/*
+ul {
+  padding: 0;
+}
+*/
+/* ╨а╨░╤Б╨┐╨╛╨╗╨╛╨╢╨╡╨╜╨╕╨╡ ╤В╨╡╤А╨╝╨╕╨╜╨╛╨▓ ╨╕ ╨╕╤Е ╨╛╨┐╨╕╤Б╨░╨╜╨╕╨╣ ╨▒╨╛╨║ ╨╛ ╨▒╨╛╨║ ╨▓ ╨╗╨╕╨╜╨╕╤О ╨┐╤А╨╕ ╨┐╨╛╨╝╨╛╤Й╨╕ .dl-horizontal (╨┤╨╗╤П ╨┐╤А╨░╨╣╤Б╨╛╨▓ ╨╕ ╤В╨╡╤Е-╤Е╨░╤А╨░╨║╤В╨╡╤А╨╕╤Б╤В╨╕╨║) */
+/* ╨Ю╤Д╨╛╤А╨╝╨╗╨╡╨╜╨╕╨╡ ╨║╨╛╨┤╨░ ╨╕ ╨╝╨░╤А╨║╨╕╤А╨╛╨▓╨╛╨║ */
+/* line 377, ../sass/_settings.scss */
+.nav-tabs {
+  border-bottom: 1px solid #1b1b1b;
+}
+/* line 378, ../sass/_settings.scss */
+.nav-tabs li {
+  margin-bottom: 0;
+  padding-right: 10px;
+  text-align: center;
+  width: 50%;
+}
+/* line 379, ../sass/_settings.scss */
+.nav-tabs li a {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 21px;
+
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 0;
+  -moz-border-radius: 8px 8px 0 0;
+  -webkit-border-radius: 8px;
+  border-radius: 8px 8px 0 0;
+  background: #1b1b1b;
+  padding: 10px 0;
+}
+/* line 381, ../sass/_settings.scss */
+.nav-tabs li a:hover {
+  background: #1b1b1b;
+  color: #00adef;
+}
+/* line 384, ../sass/_settings.scss */
+.nav-tabs .active a {
+  background: #00adef;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 21px;
+
+  color: #fff;
+}
+/* line 387, ../sass/_settings.scss */
+.nav-tabs li:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+/* line 391, ../sass/_settings.scss */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+  background: #00adef;
+  border: 0;
+  color: #fff;
+}
+
+/* line 398, ../sass/_settings.scss */
+.nav-tabs > li {
+  margin-bottom: 0px;
+}
+
+/* ╨Т╤А╨░╨┐╨┐╨╡╤А ╨┤╨╗╤П ╨░╨┤╨░╨┐╤В╨╕╨▓╨╜╤Л╤Е ╤В╨░╨▒╨╗╨╕╤Ж */
+/* ╨б╤В╨╕╨╗╨╕ ╤В╨░╨▒╨╗╨╕╤Ж
+----------------
+.active - ╨Я╤А╨╕╨╝╨╡╨╜╤П╨╡╤В ╤Ж╨▓╨╡╤В ╨┐╤А╨╕ ╨╜╨░╨▓╨╡╨┤╨╡╨╜╨╕╨╕ ╨╜╨░ ╨║╨╛╨╜╨║╤А╨╡╤В╨╜╤Г╤О ╤Б╤В╤А╨╛╨║╤Г ╨╕╨╗╨╕ ╤П╤З╨╡╨╣╨║╤Г
+ ╨║╨╗╨░╤Б╤Б╤Л ╨╝╨╛╨╢╨╜╨╛ ╨╕╤Б╨┐╨╛╨╗╤М╨╖╨╛╨▓╨░╤В╤М ╨▓ ╨╗╤О╨▒╨╛╨╣ ╤З╨░╤Б╤В╨╕ ╤В╨░╨▒╨╗╨╕╤Ж╤Л
+.success - ╨╖╨╡╨╗╨╡╨╜╤Л╨╣
+.warning - ╨╢╨╡╨╗╤В╤Л╨╣
+.danger - ╨║╤А╨░╤Б╨╜╤Л╨╣
+.info - ╤Б╨╕╨╜╨╕╨╣
+*/
+/* ╨Ф╨╛╨┐╨╛╨╗╨╜╨╕╤В╨╡╨╗╤М╨╜╤Л╨╡ ╨║╨╗╨░╤Б╤Б╤Л ╨┤╨╗╤П ╤В╨░╨▒╨╗╨╕╤Ж
+----------------
+.table-striped - ╤Б ╤З╨╡╤А╨╡╨╖╨┐╨╛╨╗╨╛╤Б╨╕╤Ж╨╡╨╣
+.table-bordered - ╤Б ╨▒╨╛╤А╨┤╨╡╤А╨░╨╝╨╕
+.table-hover - ╤Б ╤Н╤Д╤Д╨╡╨║╤В╨╛╨╝ ╨╜╨░╨▓╨╡╨┤╨╡╨╜╨╕╤П ╨╜╨░ ╤Б╤В╨╛╤З╨║╤Г
+.table-condensed - ╤Б╨╢╨░╤В╨░╤П
+*/
+/*  ╨Ы╤Н╨╣╨▒╤Л (╨║╨╗╨░╤Б╤Б╤Л ╨┤╨╗╤П .form-group)
+----------------
+.has-success
+.has-warning
+.has-error
+.has-feedback - ╨╡╤Б╨╗╨╕ ╤Г ╨╜╨░╤Б ╨╕╨║╨╛╨╜╨║╨░
+*/
+/*
+╨Ф╨╛╨▒╨░╨▓╤М╤В╨╡ .form-inline ╨┤╨╗╤П ╨▓╤Л╤А╨░╨▓╨╜╨╕╨▓╨░╨╜╨╕╤П ╨┐╨╛ ╨╗╨╡╨▓╨╛╨╝╤Г ╨║╤А╨░╤О ╨╕ ╨▓╤Б╤В╤А╨╛╨╡╨╜╨╜╨╛╨╝╤Г ╨▒╨╗╨╛╨║╤Г ╤Г╨┐╤А╨░╨▓╨╗╨╡╨╜╨╕╤П ╨┤╨╗╤П ╨║╨╛╨╝╨┐╨░╨║╤В╨╜╨╛╨╣ ╨┐╨╗╨░╨╜╨╕╤А╨╛╨▓╨║╨╕.
+╨Ш╤Б╨┐╨╛╨╗╤М╨╖╤Г╤П Bootstrap ╨┐╤А╨╡╨┤╨╛╨┐╤А╨╡╨┤╨╡╨╗╨╡╨╜╨╜╤Л╨╡ ╨║╨╗╨░╤Б╤Б╤Л ╤А╨░╨╖╨╝╨╡╤В╨║╨╕ ╨┤╨╗╤П ╨▓╤Л╤А╨░╨▓╨╜╨╕╨▓╨░╨╜╨╕╤П ╨╗╨╡╨╣╨▒╨╗╨╛╨▓ ╨╕ ╨│╤А╤Г╨┐ ╨║╨╛╨╜╤В╤А╨╛╨╗╨╛╨▓ ╤Д╨╛╤А╨╝
+╨▓ ╨│╨╛╤А╨╕╨╖╨╛╨╜╤В╨░╨╗╤М╨╜╨╛╨╝ ╨╝╨░╨║╨╡╤В╨╡ ╨┤╨╛╨▒╨░╨▓╨╗╤П╤П .form-horizontal ╨▓ ╤Д╨╛╤А╨╝╤Г (.form-group ╨┐╤А╨╡╨▓╤А╨░╤Й╨░╨╡╤В╤Б╤П ╨▓ .row).
+╨Т <label> ╨╕ <imput> ╨┤╨╛╨▒╨░╨▓╨╗╤П╨╡╨╝ ╨║╨╗╨░╤Б╤Б╤Л ╨┤╨╗╤П ╤Б╨╡╤В╨║╨╕ .col-sm-тДЦ
+
+╨Э╨░╨╕╨▒╨╛╨╗╨╡╨╡ ╤А╨░╤Б╨┐╤А╨╛╤Б╤В╤А╨░╨╜╨╡╨╜╨╜╤Л╨╡ ╤Д╨╛╤А╨╝╤Л ╤Г╨┐╤А╨░╨▓╨╗╨╡╨╜╨╕╤П, ╤В╨╡╨║╤Б╤В╨╛╨▓╤Л╨╡ ╨┐╨╛╨╗╤П ╨▓╨▓╨╛╨┤╨░ ╨▓╨║╨╗╤О╤З╨░╤О╤В ╨┐╨╛╨┤╨┤╨╡╤А╨╢╨║╤Г ╨┤╨╗╤П ╨▓╤Б╨╡╤Е ╤В╨╕╨┐╨╛╨▓
+HTML5 : text, text, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, ╨╕ color.
+
+╨Ф╨╗╤П select ╨╕╤Б╨┐╨╛╨╗╤М╨╖╤Г╨╡╤В╤Б╤П .form-control ╨Ш╤Б╨┐╨╛╨╗╤М╨╖╤Г╨╣╤В╨╡ ╨╛╨┐╤Ж╨╕╤О ╨┐╨╛ ╤Г╨╝╨╛╨╗╤З╨░╨╜╨╕╤О, ╨╕╨╗╨╕ ╨┤╨╛╨▒╨░╨▓╤М╤В╨╡ multiple, ╤З╤В╨╛╨▒╤Л ╨┐╨╛╨║╨░╨╖╨░╤В╤М ╨╜╨╡╤Б╨║╨╛╨╗╤М╨║╨╛ ╨▓╨░╤А╨╕╨░╨╜╤В╨╛╨▓ ╤Б╤А╨░╨╖╤Г.
+*/
+/* line 470, ../sass/_settings.scss */
+.form {
+  /* ╨╛╤В╤Б╤В╤Г╨┐╤Л ╨╝╨╡╨╢╨┤╤Г ╨║╨░╨╢╨┤╤Л╨╝ ╤Б╨│╤А╤Г╨┐╨┐╨╕╤А╨╛╨▓╨░╨╜╨╜╤Л╨╝ ╨▒╨╗╨╛╨║╨╛╨╝  */
+}
+/* line 472, ../sass/_settings.scss */
+.form .form-group {
+  /* The general style input, textarea, select */
+  /* Style for checkboxes*/
+  /* ╨б╤В╨╕╨╗╤М ╨┤╨╗╤П ╤А╨░╨┤╨╕╨╛╨▒╤Г╤В╤В╨╛╨╜╨╛╨▓ */
+  /* ╨Ъ╨╛╨│╨┤╨░ ╨▓╨░╨╝ ╨╜╨╡╨╛╨▒╤Е╨╛╨┤╨╕╨╝╨╛ ╤А╨░╨╖╨╝╨╡╤Б╤В╨╕╤В╤М ╤В╨╡╨║╤Б╤В ╤А╤П╨┤╨╛╨╝ ╤Б ╤Д╨╛╤А╨╝╨╛╨╣ ╤Н╤В╨╕╨║╨╡╤В╨║╨╕ ╨▓ ╨┐╤А╨╡╨┤╨╡╨╗╨░╤Е ╨│╨╛╤А╨╕╨╖╨╛╨╜╤В╨░╨╗╤М╨╜╨╛╨╣ ╤Д╨╛╤А╨╝╤Л, ╨╕╤Б╨┐╨╛╨╗╤М╨╖╤Г╨╣╤В╨╡ .form-control-static ╨║╨╗╨░╤Б╤Б ╨╜╨░ <p>. */
+  /* ╨Я╨╛╨┤╨┐╨╕╤Б╤М ╨║ input, textarea, selec */
+}
+/* line 486, ../sass/_settings.scss */
+.form .form-group .form-control {
+  /* ╤Е╨░╨║ ╨┐╤А╨╛╤В╨╕╨▓ ╨╖╤Г╨╝╨░ ╨╜╨░ ╨╝╨╛╨▒╨╕╨╗╤М╨╜╤Л╤Е */
+  font-size: 16px;
+}
+/* line 491, ../sass/_settings.scss */
+.form .form-group .form-control:focus, .form .form-group .form-control:active:focus {
+  border: none;
+  box-shadow: none;
+}
+/* line 499, ../sass/_settings.scss */
+.form .form-group .checkbox {
+  /* ╨Ш╤Б╨┐╨╛╨╗╤М╨╖╤Г╨╣╤В╨╡ .checkbox-inline ╨║╨╗╨░╤Б╤Б╨░ ╨╜╨░╨▒╨╛╤А╨╛╨╝ ╤Д╨╗╨░╨╢╨║╨╛╨▓ ╨╕╨╗╨╕ ╤А╨░╨┤╨╕╨╛╨┐╤А╨╕╨╡╨╝╨╜╨╕╨║╨╛╨▓ ╨┤╨╗╤П ╤Г╨┐╤А╨░╨▓╨╗╨╡╨╜╨╕╤П ╨╛╤В╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П╨╝╨╕ ╨╜╨░ ╤В╨╛╨╣ ╨╢╨╡ ╨╗╨╕╨╜╨╕╨╕. */
+}
+/* line 508, ../sass/_settings.scss */
+.form .form-group .radio {
+  /* ╨Ш╤Б╨┐╨╛╨╗╤М╨╖╤Г╨╣╤В╨╡ .radio-inline ╨║╨╗╨░╤Б╤Б╨░ ╨╜╨░╨▒╨╛╤А╨╛╨╝ ╤Д╨╗╨░╨╢╨║╨╛╨▓ ╨╕╨╗╨╕ ╤А╨░╨┤╨╕╨╛╨┐╤А╨╕╨╡╨╝╨╜╨╕╨║╨╛╨▓ ╨┤╨╗╤П ╤Г╨┐╤А╨░╨▓╨╗╨╡╨╜╨╕╤П ╨╛╤В╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П╨╝╨╕ ╨╜╨░ ╤В╨╛╨╣ ╨╢╨╡ ╨╗╨╕╨╜╨╕╨╕. */
+}
+
+/* line 552, ../sass/_settings.scss */
+.btn {
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+/* line 555, ../sass/_settings.scss */
+.btn:hover, .btn:active, .btn:focus, .btn:active:focus {
+  text-decoration: none;
+  outline: none;
+}
+/* line 564, ../sass/_settings.scss */
+.btn:active {
+  -moz-box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.125);
+  -webkit-box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+/* line 570, ../sass/_settings.scss */
+.btn-city {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #1b1b1b;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #1b1b1b;
+  font-weight: bold;
+}
+/* line 573, ../sass/_settings.scss */
+.btn-city:hover, .btn-city:active, .btn-city:focus, .btn-city:active:focus {
+  color: #00adef;
+  border: 1px solid #00adef;
+}
+
+/* line 579, ../sass/_settings.scss */
+.btn-main {
+  background: #C06DD1;
+}
+/* line 583, ../sass/_settings.scss */
+.btn-main:hover, .btn-main:active, .btn-main:focus, .btn-main:active:focus {
+  background: #A350C2;
+}
+
+/* ╨Р╨┤╨░╨┐╤В╨░╤Ж╨╕╤П */
+/* line 12, ../sass/_style.scss */
+.bg-grey {
+  background: #1b1b1b;
+}
+
+/* line 13, ../sass/_style.scss */
+.bg-grey_light {
+  background: #eeeeee;
+}
+.wrapp .container-fluid.bg-grey_light {
+  background: #eeeeee;
+}
+/* line 14, ../sass/_style.scss */
+.bg-grey_footer {
+  background: #222222;
+}
+
+.wrapp .container-fluid{background-color: #fff;}
+
+/* line 17, ../sass/_style.scss */
+.app {
+
+}
+/* line 18, ../sass/_style.scss */
+.app .header {
+  margin-bottom: 0;
+}
+.jumbotron{background: transparent;}
+/* line 21, ../sass/_style.scss */
+.v-align, .tournaments li .tournaments-logo .icons-dota2, .tournaments li .tournaments-logo .icons-legends, .tournaments li .tournaments-logo .tanks, .tournaments li .tournaments-logo .rpml {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+/* line 22, ../sass/_style.scss */
+.pr {
+  position: relative;
+}
+
+/* line 24, ../sass/_style.scss */
+.top-bar {
+  height: 45px;
+  padding: 10px 0;
+}
+/* line 27, ../sass/_style.scss */
+.top-bar .top-bar_left li {
+  padding: 0 10px;
+  opacity: 0.5;
+}
+/* line 28, ../sass/_style.scss */
+.top-bar .top-bar_left li:first-child {
+  padding-left: 0;
+}
+/* line 33, ../sass/_style.scss */
+.top-bar .top-bar_right li {
+  color: #888;
+  opacity: 0.6;
+}
+/* line 34, ../sass/_style.scss */
+.top-bar .top-bar_right li a {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: auto;
+}
+/* line 35, ../sass/_style.scss */
+.top-bar .top-bar_right li a i {
+  padding: 0 5px;
+}
+/* line 36, ../sass/_style.scss */
+.top-bar .top-bar_right li a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 44, ../sass/_style.scss */
+header {
+  margin-bottom: 20px;
+  background: #fff;
+  z-index: 99999;
+}
+
+/* line 45, ../sass/_style.scss */
+.navbar-default {
+  text-transform: uppercase;
+  background: none;
+  border: 0;
+  margin-bottom: 0;
+}
+/* line 47, ../sass/_style.scss */
+.navbar-default .navbar-brand {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 27px;
+
+  color: #1b1b1b;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 49, ../sass/_style.scss */
+.navbar-default .navbar-brand img {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+  max-width: 135px;
+}
+/* line 53, ../sass/_style.scss */
+.navbar-default .navbar-nav li {
+  color: #1b1b1b;
+}
+/* line 54, ../sass/_style.scss */
+.navbar-default .navbar-nav li a {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: auto;
+  font-weight: bold;
+  padding: 15px 10px;
+}
+/* line 56, ../sass/_style.scss */
+.navbar-default .navbar-nav li a:hover {
+  color: #00adef;
+}
+/* line 58, ../sass/_style.scss */
+.navbar-default .navbar-nav li a i {
+  font-size: 24px;
+  vertical-align: sub;
+}
+/* line 60, ../sass/_style.scss */
+.navbar-default .navbar-nav li.active a {
+  background: #fff;
+  color: #00adef;
+}
+/* line 61, ../sass/_style.scss */
+.navbar-default .navbar-nav li.active a:hover {
+  background: #fff;
+  color: #00adef;
+}
+
+/* line 71, ../sass/_style.scss */
+.submenu ul {
+  margin-bottom: 0;
+}
+.submenu ul li a {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #1b1b1b;
+  font-weight: bold;
+  padding: 10px 10px;
+}
+/* line 72, ../sass/_style.scss */
+.submenu ul li.active a {
+  color: #00adef;
+}
+/* line 73, ../sass/_style.scss */
+.submenu ul li:first-child {
+  padding-left: 0;
+}
+
+/* line 80, ../sass/_style.scss */
+.cp {cursor: pointer;}
+.container-fluid .jumbotron {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  padding: 100px;
+  margin-bottom: 0;
+
+}
+
+/* line 81, ../sass/_style.scss */
+.container-fluid .jumbotron.top {
+  margin-bottom: 0;
+}
+
+/* line 82, ../sass/_style.scss */
+.container-fluid .jumbotron {
+  text-shadow: 0px 0px 3px #b2b2b2;
+  margin-bottom: 0;
+  text-align: center;
+}
+/* line 84, ../sass/_style.scss */
+.container-fluid .jumbotron .lead {
+  font-family: 'proxima_nova_rg';
+  font-size: 36px;
+  line-height: 120px;
+
+  color: #fff;
+  text-transform: uppercase;
+}
+/* line 85, ../sass/_style.scss */
+.container-fluid .jumbotron .date {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: #fff;
+  font-weight: bold;
+}
+/* line 86, ../sass/_style.scss */
+.container-fluid .jumbotron .time {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: #fff;
+  font-weight: bold;
+}
+/* line 87, ../sass/_style.scss */
+.container-fluid .jumbotron span i {
+  padding-right: 3px;
+}
+.container-fluid .jumbotron.city {
+  padding: 40px 0 0;
+}
+/* line 92, ../sass/_style.scss */
+.title h2 {
+  margin: 5px 0 0 0;
+}
+
+/* line 97, ../sass/_style.scss */
+img.news-baner {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* line 98, ../sass/_style.scss */
+img.news-left285 {
+  max-width: 285px;
+  float: left;
+  padding-right: 15px;
+}
+
+/* line 99, ../sass/_style.scss */
+.img-half_inline {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 310px;
+  margin-bottom: 20px;
+}
+
+/* line 100, ../sass/_style.scss */
+.img-half_inline:nth-of-type(2n) {
+  margin-left: 12px;
+}
+
+/* line 103, ../sass/_style.scss */
+.news {
+  padding: 25px 0;
+  border-top: 1px solid #ddd;
+  -moz-box-shadow: 0px 1px 0px 0px #ddd;
+  -webkit-box-shadow: 0px 1px 0px 0px #ddd;
+  box-shadow: 0px 1px 0px 0px #ddd;
+}
+/* line 106, ../sass/_style.scss */
+.news .news-meta {
+  padding: 5px 0 15px;
+}
+/* line 108, ../sass/_style.scss */
+.news .news-title h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+
+  color: #00adef;
+}
+/* line 112, ../sass/_style.scss */
+.news .news-body a.next {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: #00adef;
+  margin-top: -10px;
+}
+.news .news-body article img{max-width: 635px!important; height: auto!important;}
+.news:last-child {
+  -moz-box-shadow: 0px 0px 0px 0px #ddd;
+  -webkit-box-shadow: 0px 0px 0px 0px #ddd;
+  box-shadow: 0px 0px 0px 0px #ddd;
+}
+
+/* line 118, ../sass/_style.scss */
+article h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+
+  color: #1b1b1b;
+}
+/* line 120, ../sass/_style.scss */
+article p {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: #000;
+  padding-bottom: 20px;
+}
+/* line 121, ../sass/_style.scss */
+article p:last-child {
+  padding-bottom: 10px;
+}
+
+/* line 126, ../sass/_style.scss */
+nav.pagi {
+  text-align: center;
+}
+
+/* line 130, ../sass/_style.scss */
+.pagination li a {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #000;
+}
+
+/* line 139, ../sass/_style.scss */
+.pagination > li > a,
+.pagination > li > span {
+  border: 0;
+}
+
+/* line 143, ../sass/_style.scss */
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+  background: transparent;
+}
+
+/* line 149, ../sass/_style.scss */
+.pagination > .disabled > a,
+.pagination > .disabled > a:focus,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > span,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > span:hover {
+  color: inherit;
+}
+
+/* line 157, ../sass/_style.scss */
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+  color: #00adef;
+  background-color: transparent;
+}
+
+/* line 169, ../sass/_style.scss */
+.breadcrumb {
+  background: #fff;
+  padding-left: 0;
+}
+/* line 170, ../sass/_style.scss */
+.breadcrumb li {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #1b1b1b;
+  font-weight: bold;
+}
+.breadcrumb li {
+
+}
+/* line 171, ../sass/_style.scss */
+.breadcrumb li a {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #00adef;
+  text-decoration: underline;
+}
+
+/* line 177, ../sass/_style.scss */
+.breadcrumb > li + li:before {
+  content: "\2192";
+}
+
+/* line 183, ../sass/_style.scss */
+.comments .title {
+  padding: 20px 0 30px 0;
+}
+/* line 184, ../sass/_style.scss */
+.comments ul {
+  border: 0;
+}
+/* line 186, ../sass/_style.scss */
+.comments ul li a img {
+  width: 41px;
+}
+/* line 187, ../sass/_style.scss */
+.comments ul li .media-heading {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #1b1b1b;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+/* line 189, ../sass/_style.scss */
+.comments ul li p {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #1B1B1B;
+}
+/* line 193, ../sass/_style.scss */
+.comments .reply {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: #666;
+  padding-left: 5px;
+}
+/* line 193, ../sass/_style.scss */
+.comments .reply i {
+  vertical-align: middle;
+}
+/* line 194, ../sass/_style.scss */
+.comments form {
+  padding: 20px 0;
+}
+/* line 195, ../sass/_style.scss */
+.comments form .form-group {
+  width: 100%;
+}
+/* line 196, ../sass/_style.scss */
+.comments form .nophoto {
+  width: 42px;
+  float: left;
+}
+/* line 197, ../sass/_style.scss */
+.comments form textarea {
+  width: 92%;
+  float: right;
+  border: 1px solid #cfd4d8;
+}
+/* line 198, ../sass/_style.scss */
+.comments form ul {
+  padding-top: 20px;
+}
+/* line 200, ../sass/_style.scss */
+.comments form ul li a {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #fff;
+  padding: 5px 40px;
+}
+/* line 200, ../sass/_style.scss */
+.comments form ul li a i {
+  padding-right: 5px;
+}
+/* line 201, ../sass/_style.scss */
+.comments form ul li a.fb {
+  background: #304591;
+}
+/* line 202, ../sass/_style.scss */
+.comments form ul li a.vk {
+  background: #527397;
+}
+/* line 203, ../sass/_style.scss */
+.comments form ul li a.tw {
+  background: #31adf4;
+}
+
+/* line 212, ../sass/_style.scss */
+.game-filter {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #1b1b1b;
+  font-weight: bold;
+  margin: 20px 0;
+}
+/* line 213, ../sass/_style.scss */
+.game-filter ul {
+  display: inline-block;
+}
+/* line 218, ../sass/_style.scss */
+.game-filter ul .active a {
+  color: #00adef;
+}
+
+/* line 224, ../sass/_style.scss */
+.tournaments {
+  margin: 15px 0 50px;
+  list-style: none;
+  padding-left: 0;
+}
+/* line 225, ../sass/_style.scss */
+.tournaments li {
+  display: block;
+  min-height: 75px;
+  padding: 10px 0;
+  cursor: pointer;
+
+}
+/* line 226, ../sass/_style.scss */
+.tournaments li .tournaments-logo {
+  display: block;
+  width: 80px;
+  min-height: 55px;
+  float: left;
+  text-align: center;
+  position: relative;
+}
+/* line 227, ../sass/_style.scss */
+.tournaments li .tournaments-logo i {
+  line-height: 75px;
+  vertical-align: middle;
+}
+/* line 229, ../sass/_style.scss */
+.tournaments li .tournaments-logo .icons-dota2 {
+  margin-top: -28px;
+  margin-left: -25px;
+}
+/* line 230, ../sass/_style.scss */
+.tournaments li .tournaments-logo .icons-legends {
+  margin-top: -10px;
+  margin-left: -27px;
+}
+/* line 231, ../sass/_style.scss */
+.tournaments li .tournaments-logo .tanks {
+  margin-top: -15px;
+  margin-left: -25px;
+}
+/* line 232, ../sass/_style.scss */
+.tournaments li .tournaments-logo .rpml {
+  margin-top: -25px;
+  margin-left: -20px;
+}
+/* line 234, ../sass/_style.scss */
+.tournaments li .tournaments-body {
+  display: inline-block;
+  margin-top: 5px;
+}
+/* line 235, ../sass/_style.scss */
+.tournaments li .tournaments-body h3 {
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 12px;
+  line-height: 17px;
+}
+/* line 236, ../sass/_style.scss */
+.tournaments li .tournaments-body span {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 22px;
+
+  color: #7d7d7d;
+  padding: 0;
+}
+/* line 237, ../sass/_style.scss */
+.tournaments li .tournaments-body span i {
+  padding-right: 5px;
+}
+/* line 238, ../sass/_style.scss */
+.tournaments li .tournaments-body span .label-live {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: #fff;
+  padding: 0px 5px 1px;
+}
+/* line 241, ../sass/_style.scss */
+.tournaments li:nth-of-type(2n+1) {
+  background: #f7f7f7;
+}
+/* line 242, ../sass/_style.scss */
+.tournaments li:hover {
+  -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.13);
+  z-index: 3;
+  position: relative;
+}
+/* line 243, ../sass/_style.scss */
+.tournaments li:hover h3 {
+  color: #00adef;
+}
+
+/* line 247, ../sass/_style.scss */
+.tournaments.sm-b {
+  margin-bottom: 25px;
+}
+
+/* line 251, ../sass/_style.scss */
+.gamers-list li a:hover {
+  text-decoration: none!important;
+}
+.gamers-list li {
+  cursor: pointer;
+  list-style: none;
+}
+/* line 252, ../sass/_style.scss */
+.gamers-list li .gamers-list-logo {
+  display: block;
+  width: 100px;
+  float: left;
+  text-align: center;
+  position: relative;
+}
+/* line 253, ../sass/_style.scss */
+.gamers-list li .gamers-list-body {
+  padding-left: 120px;
+
+}
+/* line 254, ../sass/_style.scss */
+.gamers-list li .gamers-list-body h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+/* line 254, ../sass/_style.scss */
+.gamers-list li .gamers-list-body h3 span {
+  font-size: 12px;
+  font-weight: normal;
+}
+/* line 255, ../sass/_style.scss */
+.gamers-list li .gamers-list-body .status {
+  margin: 8px 0;
+  display: inline-block;
+}
+/* line 259, ../sass/_style.scss */
+.gamers-list > li {
+  padding: 20px;
+}
+/* line 260, ../sass/_style.scss */
+.gamers-list > li:nth-of-type(2n+1) {
+  background: #f7f7f7;
+}
+/* line 261, ../sass/_style.scss */
+.gamers-list > li:hover {
+  -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.13);
+  z-index: 3;
+  position: relative;
+}
+/* line 263, ../sass/_style.scss */
+.gamers-list .team-gamers {
+  padding-top: 30px;
+  padding-left: 120px;
+}
+/* line 265, ../sass/_style.scss */
+.gamers-list .team-gamers li a {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #00adef;
+  font-weight: bold;
+  text-decoration: underline;
+}
+/* line 266, ../sass/_style.scss */
+.gamers-list .team-gamers li span {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #1b1b1b;
+  font-weight: bold;
+}
+/* line 267, ../sass/_style.scss */
+.gamers-list .team-gamers li em {
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  line-height: 15px;
+
+  color: #00adef;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 272, ../sass/_style.scss */
+ul.nav.nav-tabs {
+  padding-top: 30px;
+  border-top: 1px solid #cfd4d8;
+}
+
+/* line 275, ../sass/_style.scss */
+.tab-pane article {
+  margin: 30px 0;
+}
+
+/* line 277, ../sass/_style.scss */
+.partners {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #cfd4d8;
+  margin: 20px 0 50px;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 13px;
+}
+/* line 278, ../sass/_style.scss */
+.partners li {
+  padding: 20px 0;
+}
+/* line 279, ../sass/_style.scss */
+.partners li img {
+  width: auto;
+  max-width: 200px;
+}
+
+/* line 284, ../sass/_style.scss */
+.view {
+  position: relative;
+}
+/* line 285, ../sass/_style.scss */
+.view img {
+  max-width: 250px;
+}
+/* line 286, ../sass/_style.scss */
+.view .view-link {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  width: 130px;
+  height: 130px;
+  background: #00adef;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 130px;
+
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* line 295, ../sass/_style.scss */
+.area-list ul li a {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #00adef;
+  text-decoration: underline;
+}
+.social-widget ul li a{
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #00adef;
+  text-decoration: underline;
+}
+/* line 300, ../sass/_style.scss */
+.media-list {
+  border-top: 1px solid #cfd4d8;
+  position: relative;
+}
+/* line 301, ../sass/_style.scss */
+.media-list .all {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #00adef;
+  position: absolute;
+  top: -40px;
+  right: 0px;
+}
+/* line 304, ../sass/_style.scss */
+.media-list ul {
+  text-align: justify;
+  padding-left: 5px;
+}
+/* line 305, ../sass/_style.scss */
+.media-list ul li {
+  max-width: 310px;
+  padding: 20px 0 30px;
+  vertical-align: top;
+}
+/* line 307, ../sass/_style.scss */
+.media-list ul li a figure {
+  position: relative;
+}
+/* line 308, ../sass/_style.scss */
+.media-list ul li a figure img {
+  background: #000;
+}
+/* line 309, ../sass/_style.scss */
+.media-list ul li a figure i.glyphicon-play-circle {
+  color: #00adef;
+  font-size: 55px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: -25px;
+}
+/* line 312, ../sass/_style.scss */
+.media-list ul li a figure .wach-count {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: #00adef;
+}
+/* line 312, ../sass/_style.scss */
+.media-list ul li a figure .wach-count i {
+  font-size: 24px;
+  vertical-align: middle;
+}
+/* line 313, ../sass/_style.scss */
+.media-list ul li a figure .date {
+  padding: 2px 0;
+}
+/* line 314, ../sass/_style.scss */
+.media-list ul li a figure figcaption {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 316, ../sass/_style.scss */
+.media-list ul li a:hover {
+  text-decoration: none;
+}
+/* line 318, ../sass/_style.scss */
+.media-list ul li a:hover figure span {
+  text-decoration: none;
+}
+/* line 319, ../sass/_style.scss */
+.media-list ul li a:hover figure figcaption {
+  text-decoration: none;
+  color: #00adef;
+}
+/* line 323, ../sass/_style.scss */
+.media-list ul li:nth-of-type(2n+1) {
+  margin-right: 12px;
+}
+
+/* line 329, ../sass/_style.scss */
+.map-filter {
+  position: relative;
+  z-index: 1;
+}
+/* line 330, ../sass/_style.scss */
+.map-filter ul {
+  margin: 30px 0;
+  text-align: center;
+}
+/* line 331, ../sass/_style.scss */
+.map-filter ul li {
+  width: 239px;
+  padding-bottom: 20px;
+}
+/* line 332, ../sass/_style.scss */
+.map-filter ul li a {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+/* line 336, ../sass/_style.scss */
+.map-filter ul li.active .btn-city {
+  color: #00adef;
+  border: 1px solid #00adef;
+}
+/* line 339, ../sass/_style.scss */
+.map-filter figure {
+  text-align: center;
+  position: relative;
+}
+/* line 340, ../sass/_style.scss */
+.map-filter figure img {
+  width: 842px;
+}
+/* line 343, ../sass/_style.scss */
+.map-filter figure figcaption a {
+  position: absolute;
+  cursor: pointer;
+  display: block;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #000;
+  font-weight: bold;
+}
+/* line 345, ../sass/_style.scss */
+.map-filter figure figcaption a .map-pointer {
+  width: 14px;
+  height: 14px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: block;
+  background: #ef3a41;
+  margin: 0 auto;
+}
+/* line 349, ../sass/_style.scss */
+.map-filter figure figcaption a:hover {
+  text-decoration: none;
+}
+/* line 350, ../sass/_style.scss */
+.map-filter figure figcaption a:hover .map-pointer {
+  -moz-box-shadow: 0px 0px 10px 4px rgba(231, 166, 26, 0.9);
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(231, 166, 26, 0.9);
+  box-shadow: 0px 0px 10px 4px rgba(231, 166, 26, 0.9);
+}
+/* line 354, ../sass/_style.scss */
+.map-filter figure figcaption a.active {
+  text-decoration: none;
+}
+/* line 355, ../sass/_style.scss */
+.map-filter figure figcaption a.active .map-pointer {
+  -moz-box-shadow: 0px 0px 10px 4px rgba(231, 166, 26, 0.9);
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(231, 166, 26, 0.9);
+  box-shadow: 0px 0px 10px 4px rgba(231, 166, 26, 0.9);
+}
+/* line 357, ../sass/_style.scss */
+.map-filter figure figcaption .msk {
+  top: 191px;
+  left: 156px;
+}
+/* line 358, ../sass/_style.scss */
+.map-filter figure figcaption .vld {
+  bottom: -6px;
+  right: 120px;
+}
+/* line 359, ../sass/_style.scss */
+.map-filter figure figcaption .spb {
+  top: 128px;
+  left: 116px;
+}
+/* line 360, ../sass/_style.scss */
+.map-filter figure figcaption .ekt {
+  top: 269px;
+  left: 250px;
+}
+/* line 361, ../sass/_style.scss */
+.map-filter figure figcaption .kaz {
+  top: 236px;
+  left: 209px;
+}
+/* line 362, ../sass/_style.scss */
+.map-filter figure figcaption .nsib {
+  bottom: 61px;
+  left: 360px;
+}
+/* line 363, ../sass/_style.scss */
+.map-filter figure figcaption .minv {
+  top: 306px;
+  left: 50px;
+}
+/* line 364, ../sass/_style.scss */
+.map-filter figure figcaption .krsn {
+  top: 276px;
+  left: 59px;
+}
+
+/* line 369, ../sass/_style.scss */
+.bg-hack {
+  position: absolute;
+  width: 100%;
+  height: 631px;
+  background: #f2f2f2 none repeat scroll 0% 0%;
+  top: 68px;
+  z-index: 0;
+}
+
+/* line 373, ../sass/_style.scss */
+.media-content {
+  padding: 25px 0 50px 0;
+  border-top: 1px solid #cfd4d8;
+}
+.media-content figure img{max-width: 637px!important; height: auto!important;}
+/* line 374, ../sass/_style.scss */
+.media-content a {
+  margin-top: 10px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #00adef;
+  text-decoration: none;
+}
+/* line 375, ../sass/_style.scss */
+.media-content a.next {
+  float: right;
+}
+/* line 376, ../sass/_style.scss */
+.media-content a.prew {
+  float: left;
+}
+
+/* line 381, ../sass/_style.scss */
+.top-footer .title {
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid #cfd4d8;
+}
+/* line 383, ../sass/_style.scss */
+.top-footer .view, .top-footer .area-list, .top-footer .facebook-widget {
+  padding: 20px;
+}
+
+/* line 388, ../sass/_style.scss */
+footer {
+  padding: 25px 0;
+}
+/* line 389, ../sass/_style.scss */
+footer h4 {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #929292;
+  text-transform: uppercase;
+}
+/* line 391, ../sass/_style.scss */
+footer ul li {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #fff;
+  font-weight: bold;
+}
+/* line 392, ../sass/_style.scss */
+footer ul li .mail {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #00adef;
+}
+
+/* line 398, ../sass/_style.scss */
+.copyright {
+  background: #1b1b1b;
+  text-align: center;
+  padding: 10px 0;
+}
+/* line 399, ../sass/_style.scss */
+.copyright h4 {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #929292;
+  text-transform: none;
+  margin-bottom: 0;
+}
+
+/* line 403, ../sass/_style.scss */
+.arrow-up {
+  width: 0px;
+  height: 0px;
+  background: #eeeeee;
+  text-align: center;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  text-decoration: none!important;
+}
+.arrow-up:active,.arrow-up:active:hover,.arrow-up:active:focus{text-decoration: none!important;}
+
+/* line 405, ../sass/_style.scss */
+.arrow-up span {
+  color: #00adef;
+  font-size: 0;
+  line-height: 70px;
+}
+/* line 408, ../sass/_style.scss */
+.arrow-up:hover {
+  text-decoration: none;
+}
+
+/* line 410, ../sass/_style.scss */
+.arrow-up.show {
+  width: 80px;
+  height: 80px;
+}
+/* line 411, ../sass/_style.scss */
+.arrow-up.show span {
+  font-size: 30px;
+}
+
+/* line 415, ../sass/_style.scss */
+#regform-popup {
+  display: none;
+}
+
+/* line 416, ../sass/_style.scss */
+#login-popup {
+  display: none;
+}
+
+/* line 417, ../sass/_style.scss */
+#resque-popup {
+  display: none;
+}
+
+/* line 419, ../sass/_style.scss */
+.popup {
+  background: #fff;
+  width: 300px;
+  padding: 20px 20px;
+  border-radius: 5px;
+}
+/* line 420, ../sass/_style.scss */
+.popup .popup-header {
+  position: relative;
+}
+/* line 421, ../sass/_style.scss */
+.popup .popup-header h3 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+/* line 422, ../sass/_style.scss */
+.popup .popup-header a {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: #00adef;
+  float: right;
+}
+/* line 423, ../sass/_style.scss */
+.popup .popup-header span {
+  color: #fff;
+  background: #1b1b1b;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  bottom: 35px;
+  right: -35px;
+  padding: 6px 8px;
+  text-align: center;
+}
+/* line 425, ../sass/_style.scss */
+.popup .popup-header span:hover {
+  -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.13);
+}
+/* line 428, ../sass/_style.scss */
+.popup .popup-body {
+  text-align: center;
+  background: #fff;
+}
+/* line 429, ../sass/_style.scss */
+.popup .popup-body form {
+  margin: 0 auto;
+}
+/* line 430, ../sass/_style.scss */
+.popup .popup-body form .form-group {
+  text-align: left;
+}
+/* line 431, ../sass/_style.scss */
+.popup .popup-body form .form-group label {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #5f5f5f;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+/* line 434, ../sass/_style.scss */
+.popup .popup-body form .form-group input[type="file"] {
+  margin: 5px auto 5px auto;
+  margin-left: 35px;
+}
+/* line 436, ../sass/_style.scss */
+.popup .popup-body form .btn-submit {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+  background: #1b1b1b;
+  margin: 10px auto;
+}
+/* line 439, ../sass/_style.scss */
+.popup .popup-body form a {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: #00adef;
+}
+
+@-moz-keyframes animation-icon {
+  0% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes animation-icon {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes animation-icon {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+/* line 16, ../sass/_animation.scss */
+.animation-icon-pen {
+  -moz-animation: animation-icon 1s 0s forwards ease-in normal;
+  -webkit-animation: animation-icon 1s 0s forwards ease-in normal;
+  animation: animation-icon 1s 0s forwards ease-in normal;
+}
+
+/* line 19, ../sass/_animation.scss */
+.animation-icon-list {
+  -moz-animation: animation-icon 1s 0.2s forwards ease-in normal;
+  -webkit-animation: animation-icon 1s 0.2s forwards ease-in normal;
+  animation: animation-icon 1s 0.2s forwards ease-in normal;
+}
+
+/* line 22, ../sass/_animation.scss */
+.animation-icon-brush {
+  -moz-animation: animation-icon 1s 0.4s forwards ease-in normal;
+  -webkit-animation: animation-icon 1s 0.4s forwards ease-in normal;
+  animation: animation-icon 1s 0.4s forwards ease-in normal;
+}
+
+/* line 25, ../sass/_animation.scss */
+.animation-icon-mech {
+  -moz-animation: animation-icon 1s 0.6s forwards ease-in normal;
+  -webkit-animation: animation-icon 1s 0.6s forwards ease-in normal;
+  animation: animation-icon 1s 0.6s forwards ease-in normal;
+}
+
+/* line 28, ../sass/_animation.scss */
+.animation-icon-play {
+  -moz-animation: animation-icon 1s 0.8s forwards ease-in normal;
+  -webkit-animation: animation-icon 1s 0.8s forwards ease-in normal;
+  animation: animation-icon 1s 0.8s forwards ease-in normal;
+}
+
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/css/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+
+/* castum */
+.navbar-brand {
+    padding: 3px 0px!important;
+}
+
+.title h1{margin-top: 0;}
+.title + strong {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #000;
+  font-weight: bold;
+}
+.wrapp > .container-fluid {padding-top: 10px; padding-bottom: 10px;}
+
+.breadcrumb>.active {
+    color: #777;
+    display: inline-block;
+    max-width: 250px;
+    white-space: pre;
+    white-space: nowrap;
+    overflow-x: hidden;
+    vertical-align: bottom;
+    text-overflow: ellipsis;
+}
+
+.city .logo {max-width: 80px; float: left;}
+
+.icons{
+  display: inline-block;
+  width: 52px; height: 50px;
+}
+.tournaments .tournaments-logo .icons-dota2{
+  background: url(../img/icons/dota2.svg) no-repeat!important;
+}
+.tournaments .tournaments-logo .icons-csgo{background: url(../img/icons/csgo.svg) no-repeat!important;}
+.tournaments .tournaments-logo .icons-hearthstone{background: url(../img/icons/herthstone.svg) no-repeat!important;}
+
+.disabled > a:hover,
+.disabled > a:focus {
+  color: #777;
+  text-decoration: none;
+  cursor: not-allowed;
+  background-color: transparent;
+}
+
+.online-block  {
+
+}

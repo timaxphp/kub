@@ -1,0 +1,38 @@
+{% extends 'tourney/base.html' %}
+
+{% load staticfiles %}
+
+{% block main-tourney %}
+    <div class="container-fluid">
+    <!-- BREADCRUMB -->
+        <div class="row">
+            <div class="col-md-12">
+
+                <ol class="breadcrumb">
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="{% url 'tourney_map' %}">Ход турнира</a></li>
+                    <li><a href="{% url 'tournament_city_info' city.short_name %}">{{ city.name }}</a></li>
+                    <li class="active">Информация</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <!-- CONTENT TITLE -->
+                <div class="title">
+                    <h1>Информация</h1>
+                </div>
+                <div>
+                    {% if info %}
+                        {{ info|safe }}
+                    {% else %}
+                        Пока что информации о данном городе нет!
+                    {% endif %}
+                </div>
+            </div><!-- col -->
+            <div class="col-md-4">
+              {% include "sidebar.html" %}
+            </div><!-- col -->
+        </div><!-- row -->
+    </div><!-- container -->
+{% endblock %}

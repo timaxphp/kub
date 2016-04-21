@@ -1,0 +1,131 @@
+{% extends 'media/base.html' %}
+
+{% load staticfiles %}
+
+{% block main-media %}
+    <div class="container-fluid">
+      
+        <div class="row">
+            <div class="col-md-8">
+
+                <!-- CONTENT TITLE -->
+                <div class="title">
+                    <h1>{{ media.title }}</h1>
+                </div>
+
+                <!-- MEDIA CONTENT -->
+                <div class="media-content">
+                    <figure>
+                        {{ media.html|safe }}
+                    </figure>
+                    {% if prev_pk != -1 %}
+                        <a href="{% url 'media_detail' prev_pk %}" class="prew">&larr; Предыдущее {{ media.get_type_display }}</a>
+                    {% endif %}
+                    {% if next_pk != -1 %}
+                        <a href="{% url 'media_detail' next_pk %}" class="next">Следующее {{ media.get_type_display }} &rarr;</a>
+                    {% endif %}
+                    <div class="clear"></div>
+                </div>
+                <!-- TITLE -->
+                <div class="title">
+                    <h2>Комментарии</h2>
+                </div>
+                <!-- COMMENTS -->
+                <div class="comments">
+                  <!-- Put this script tag to the <head> of your page -->
+                  <script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>
+
+                  <script type="text/javascript">
+                    VK.init({apiId: 5388576, onlyWidgets: true});
+                  </script>
+
+                  <!-- Put this div tag to the place, where the Comments block will be -->
+                  <div id="vk_comments"></div>
+                  <script type="text/javascript">
+                  VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+                  </script>
+                </div>
+            </div><!-- col -->
+            <div class="col-md-4">
+
+            <!-- SIDE BAR -->
+                <!-- TITLE -->
+                <div class="title">
+                    <h2>Ближайшие турниры</h2>
+                </div>
+
+                <!-- NEXT TOURNAMENTS LIST -->
+                <ul class="tournaments">
+                    <li>
+                        <span class="tournaments-logo"><i class="icons icons-dota2"></i></span>
+                        <span class="tournaments-body">
+                            <h3>eurasia cyber sport 2016</h3>
+                            <span class="date"><i class="icon-calendar"></i>29.01.2016(MSK)</span>
+                            <span class="time"><i class="icon-clock"></i>10:00</span>
+                        </span>
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                        <span class="tournaments-logo"><i class="icons icons-legends"></i></span>
+                        <span class="tournaments-body">
+                            <h3>eurasia cyber sport 2016</h3>
+                            <span class="date"><i class="icon-calendar"></i>29.01.2016(MSK)</span>
+                            <span class="time"><i class="icon-clock"></i><span class="label label-live">Live</span></span>
+                        </span>
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                        <span class="tournaments-logo"><i class="icons icons-tanks"></i></span>
+                        <span class="tournaments-body">
+                            <h3>eurasia cyber sport 2016</h3>
+                            <span class="date"><i class="icon-calendar"></i>29.01.2016(MSK)</span>
+                            <span class="time"><i class="icon-clock"></i>10:00</span>
+                        </span>
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                        <span class="tournaments-logo"><i class="icons icons-tanks"></i></span>
+                        <span class="tournaments-body">
+                            <h3>eurasia cyber sport 2016</h3>
+                            <span class="date"><i class="icon-calendar"></i>29.01.2016(MSK)</span>
+                            <span class="time"><i class="icon-clock"></i>10:00</span>
+                        </span>
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                        <span class="tournaments-logo"><i class="icons icons-rpml"></i></span>
+                        <span class="tournaments-body">
+                            <h3>eurasia cyber sport 2016</h3>
+                            <span class="date"><i class="icon-calendar"></i>29.01.2016(MSK)</span>
+                            <span class="time"><i class="icon-clock"></i>10:00</span>
+                        </span>
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                        <span class="tournaments-logo"><i class="icons icons-dota2"></i></span>
+                        <span class="tournaments-body">
+                            <h3>eurasia cyber sport 2016</h3>
+                            <span class="date"><i class="icon-calendar"></i>29.01.2016(MSK)</span>
+                            <span class="time"><i class="icon-clock"></i>10:00</span>
+                        </span>
+                        <div class="clear"></div>
+                    </li>
+                </ul>
+
+                <!-- TITLE -->
+                <div class="title">
+                    <h2>Наши Партнеры</h2>
+                </div>
+
+                <!--  PARTNERS LIST -->
+                <ul class="partners">
+			<li><a href="http://cybersport.ru/" target="_blank" rel="external"> <img src="{% static 'img/cybersport.ru.png' %}" alt="cybersport.ru"/></a></li>
+                    <li><a href="#" target="_blank"><i class="icons icons-gamer"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="icons icons-cult"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="icons icons-gooddame"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="icons icons-sportcom"></i></a></li>
+                </ul>
+            </div><!-- col -->
+        </div><!-- row -->
+    </div><!-- container -->
+{% endblock %}

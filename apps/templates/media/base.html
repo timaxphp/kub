@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+<!-- JUMBOTRON -->
+{% block main %}
+    <section class="section np-b cp" onClick="window.open('http://www.yota.ru');">
+        <div class="container-fluid">
+            <div class="jumbotron" style="background: url('{% static 'img/banner_for_main.png'%}') center center no-repeat;"></div>
+        </div><!-- container -->
+    </section>
+    <section class="section wrapp">
+        {% block main-media %}
+
+        {% endblock %}
+    </section>
+    <!-- JUMBOTRON -->
+    <section class="section np-t cp" onClick="window.open('http://www.yota.ru');" >
+        <div class="container-fluid">
+            <div class="jumbotron" style="background: url({% static 'img/banner_for_main.png' %}) center center no-repeat;"></div>
+        </div><!-- container -->
+    </section>
+{% endblock %}

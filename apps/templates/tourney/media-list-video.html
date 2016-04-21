@@ -1,0 +1,43 @@
+{% extends 'tourney/base.html' %}
+
+{% load staticfiles %}
+
+{% block main-tourney %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+
+                <!-- CONTENT TITLE -->
+                <div class="title">
+                    <h1>Видео</h1>
+
+                </div>
+
+                <!-- VIDEO LIST -->
+                <div class="media-list">
+                    {% if videos %}
+                        <ul class="list-inline list-unstyled">
+                            {% for video in videos %}
+                                <li>
+                                    <a href="{% url 'tournament_media_detail' city.short_name video.pk %}">
+                                        <figure>
+                                            <img {% if video.thumb_image %} src="{{ video.thumb_image.url }}" {% endif %} alt="">
+                                            <i class="glyphicon glyphicon-play-circle"></i>
+                                            <span class="date">{{ video.created_at }}</span>
+                                            <figcaption>{{ video.title }}</figcaption>
+                                        </figure>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        Пока что видео нет!
+                    {% endif %}
+                </div>
+            </div><!-- col -->
+            <div class="col-md-4">
+              {% include "sidebar.html" %}
+            </div><!-- col -->
+        </div><!-- row -->
+    </div><!-- container -->
+{% endblock %}

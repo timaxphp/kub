@@ -1,0 +1,71 @@
+{% extends 'news/base.html' %}
+
+{% load staticfiles %}
+
+{% block main-news %}
+<div class="container-fluid">
+  <!-- BREADCRUMB -->
+  <div class="row">
+      <div class="col-md-12">
+
+          <ol class="breadcrumb">
+              <li><a href="/">Новости</a></li>
+              <li class="active">{{ article.title }}</li>
+          </ol>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-8">
+
+          <!-- CONTENT TITLE -->
+          <div class="title">
+              <h1>Новости</h1>
+          </div>
+
+          <!-- NEWS -->
+          <div class="news">
+              <div class="news-meta">
+                  <span class="label label-default">{{ article.get_type_display }}</span>
+                  <span class="date">{{ article.created_at }}</span>
+              </div>
+              <div class="news-title">
+                  <h2>{{ article.title }}</h2>
+              </div>
+              <div class="news-body">
+                  {% if article.main_image %}
+                      <img src="{{ article.main_image.url }}" alt="" class="news-baner">
+                  {% endif %}
+                  <article>
+                      {{ article.article|safe }}
+                  </article>
+              </div>
+              <div class="clear"></div>
+          </div>
+
+          <!-- TITLE -->
+          <div class="title">
+              <h2>Комментарии</h2>
+          </div>
+
+          <!-- COMMENTS -->
+          <div class="comments">
+            <!-- Put this script tag to the <head> of your page -->
+            <script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>
+
+            <script type="text/javascript">
+              VK.init({apiId: 5388576, onlyWidgets: true});
+            </script>
+
+            <!-- Put this div tag to the place, where the Comments block will be -->
+            <div id="vk_comments"></div>
+            <script type="text/javascript">
+            VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+            </script>
+          </div>
+      </div><!-- col -->
+      <div class="col-md-4">
+        {% include "sidebar.html" %}
+      </div><!-- col -->
+  </div><!-- row -->
+</div><!-- container -->
+{% endblock %}

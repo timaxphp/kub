@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block main %}
+    <!-- JUMBOTRON -->
+    <section class="section np">
+        <div class="container-fluid">
+            <div  class="jumbotron city">
+                <!-- {% if city.image %} style="background: url('{{ city.image.url }}') center center no-repeat; background-size: cover;"{% endif %}  -->
+                <a href="http://www.yota.ru" target="_blank"><img src="{% static 'img/yota.png' %}" alt="Йота" class="logo"></a>
+                <p class="lead">{{ city.name }}</p>
+            </div>
+        </div><!-- container -->
+    </section>
+
+    <!-- SUBMENU -->
+
+
+
+
+    <!-- CONTENT -->
+    <section class="section wrapp">
+
+        <!-- SUBMENU -->
+        <div class="container-fluid bg-grey_light">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="submenu">
+                        <ul class="list-inline list-unstyled">
+                            <li {% if is_info %} class="active" {% endif %}><a href="{% url 'tournament_city_info' city.short_name %}">Информация</a></li>
+                            <li {% if is_tournaments %} class="active" {% endif %}><a href="{% url 'tournament_city_tournaments' city.short_name %}">Турниры</a></li>
+                            <li role="presentation" class="disabled"><a href="#">Участники</a></li>
+                            <li style="display: none;" {% if is_news %} class="active" {% endif %}><a href="{% url 'tournament_city_news' city.short_name %}">Новости</a></li>
+                            <li {% if is_media %} class="active" {% endif %}><a href="{% url 'tournament_media' city.short_name %}">Медиа</a></li>
+                            <li {% if is_rules %} class="active" {% endif %}><a href="{% url 'tournament_city_rules' city.short_name %}">Правила</a></li>
+                        </ul>
+                    </div>
+
+                </div><!-- col -->
+            </div><!-- row -->
+        </div><!-- container -->
+        {% block main-tourney %}
+
+        {% endblock %}
+    </section>
+{% endblock %}

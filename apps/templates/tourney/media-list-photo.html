@@ -1,0 +1,40 @@
+{% extends 'tourney/base.html' %}
+
+{% load staticfiles %}
+
+{% block main-tourney %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <!-- CONTENT TITLE -->
+                <div class="title">
+                    <h1>Фото</h1>
+                </div>
+
+                <!-- PHOTO LIST -->
+                <div class="media-list">
+                    {% if photos %}
+                        <ul class="list-inline list-unstyled">
+                            {% for photo in photos %}
+                                <li>
+                                    <a href="{% url 'tournament_media_detail' city.short_name photo.pk %}">
+                                        <figure>
+                                            <img {% if photo.thumb_image %} src="{{ photo.thumb_image.url }}" {% endif %} alt="">
+                                             <span class="date">{{ photo.created_at }}</span>
+                                            <figcaption>{{ photo.title }}</figcaption>
+                                        </figure>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        Пока что фото нет!
+                    {% endif %}
+                </div>
+            </div><!-- col -->
+            <div class="col-md-4">
+              {% include "sidebar.html" %}
+            </div><!-- col -->
+        </div><!-- row -->
+    </div><!-- container -->
+{% endblock %}

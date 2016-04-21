@@ -1,0 +1,78 @@
+{% extends 'news/base.html' %}
+
+{% load staticfiles misc tourney %}
+
+{% block main-news %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <!-- CONTENT TITLE -->
+                <div class="title">
+                    <h1>Новости</h1>
+                </div>
+                <!-- NEWS -->
+                {% for article in news %}
+                    <div class="news">
+                        <div class="news-meta">
+                            <span class="label label-default">{{ article.get_type_display }}</span>
+                            <span class="date">{{ article.created_at }}</span>
+                        </div>
+                        <div class="news-title">
+                            <h2><a href="{% url 'news_detail' article.pk %}" class="next">{{ article.title }}</a></h2>
+                        </div>
+                        <div class="news-body">
+                            {% if article.main_image %}
+                                <img src="{{ article.main_image.url }}" alt="" class="news-baner">
+                            {% endif %}
+                            <article>
+                                {{ article.short_article|safe }}
+                            </article>
+                            <a href="{% url 'news_detail' article.pk %}" class="next">Читать далее →</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                {% endfor %}
+                <!-- NEWS -->
+                {% if is_paginated %}
+                    <nav class="pagi">
+                        <ul class="pagination">
+                            {% if page_obj.has_previous %}
+                                <li>
+                                    <a href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                                        <span aria-hidden="true">&larr; Назад</span>
+                                    </a>
+                                </li>
+                            {% else %}
+                                <li class="disabled">
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&larr; Назад</span>
+                                    </a>
+                                </li>
+                            {% endif %}
+                            {% for i in page_obj.paginator.num_pages|get_paginator_range %}
+                                <li {% if page_obj.number == i %} class="disabled active" {% endif %}><a href="?page={{ i }}">{{ i }}</a></li>
+                            {% endfor %}
+                            {% if page_obj.has_next %}
+                                <li>
+                                    <a href="?page={{ page_obj.next_page_number }}" aria-label="Previous">
+                                        <span aria-hidden="true">Вперед &rarr;</span>
+                                    </a>
+                                </li>
+                            {% else %}
+                                <li class="disabled">
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">Вперед &rarr;</span>
+                                    </a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                {% endif %}
+
+            </div><!-- col -->
+            <div class="col-md-4">
+                {% include "sidebar.html" %}
+            </div><!-- col -->
+        </div><!-- row -->
+    </div><!-- container -->
+{% endblock %}

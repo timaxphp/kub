@@ -1,0 +1,51 @@
+{% extends 'tourney/base.html' %}
+
+{% load staticfiles %}
+
+{% block main-tourney %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+
+                <ol class="breadcrumb">
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="{% url 'tourney_map' %}">Ход турнира</a></li>
+                    <li><a href="{% url 'tournament_city_info' city.short_name %}">{{ city.name }}</a></li>
+                    <li class="active">Турниры</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <!-- CONTENT TITLE -->
+                <div class="title">
+                    <h1>Турниры</h1>
+                </div>
+
+                <!-- PHOTO LIST -->
+                <div class="tournaments-list">
+                    {% if tournaments %}
+                        <ul class="tournaments sm-b">
+                            {% for tournament in tournaments %}
+                                <li>
+                                    <a target="_blank" href="{{ tournament.url }}" class="tournaments-body">
+                                        <span class="tournaments-logo"><i class="icons icons-{{ tournament.game_name|lower }}"></i></span>
+                                        <h3>{{ tournament.name }}</h3>
+                                        <span class="date"><i class="icon-calendar"></i>{{ tournament.time|date:"d.m.Y" }}</span>
+                                        <span class="time"><i class="icon-clock"></i>{{ tournament.time|date:"H:i" }} (MSK)</span>
+                                    </a>
+                                    <div class="clear"></div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        Пока что турниров по этому городу нет!
+                    {% endif %}
+                </div>
+            </div><!-- col -->
+            <div class="col-md-4">
+                {% include "sidebar.html" %}
+            </div><!-- col -->
+        </div><!-- row -->
+    </div><!-- container -->
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "tourney/base.html" %}
+{% load staticfiles %}
+
+{% block main-tourney %}
+  <div class="container-fluid">
+  <!-- BREADCRUMB -->
+      <div class="row">
+          <div class="col-md-12">
+
+            <ol class="breadcrumb">
+                <li><a href="/">Главная</a></li>
+                <li><a href="{% url 'tourney_map' %}">Ход турнира</a></li>
+                <li><a href="{% url 'tournament_city_info' city.short_name %}">{{ city.name }}</a></li>
+                <li class="active">Правила</li>
+            </ol>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-8">
+
+              <!-- CONTENT TITLE -->
+              <div class="title">
+                  <h1>Правила</h1>
+              </div>
+
+              <!-- RULES-->
+              <!-- Nav tabs -->
+              {% if rules %}
+                  <ul class="nav nav-tabs" role="tablist">
+                      <!-- <li role="presentation" class="active"><a href="#regulations" aria-controls="regulations" role="tab" data-toggle="tab" aria-expanded="true">Регламент</a></li> -->
+                      <li role="presentation" class="active"><a href="#state" aria-controls="state" role="tab" data-toggle="tab" aria-expanded="false">Положение</a></li>
+                      <li role="presentation" class=""><a href="#tech_rule" aria-controls="tech_rule" role="tab" data-toggle="tab" aria-expanded="false">Технические правила</a></li>
+                  </ul>
+
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                      <!-- ONLINE GAMES -->
+                      <div role="tabpanel" class="tab-pane active in" id="regulations">
+                          <!-- SOME CONTENT -->
+                          <article>
+                              {{ regulations|safe }}
+                          </article>
+
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="state">
+                          <!-- SOME CONTENT -->
+                          <article>
+                            {{ states|safe }}
+                          </article>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="tech_rule">
+                          <!-- SOME CONTENT -->
+                          <article>
+                            {{ tech_rules|safe }}
+                          </article>
+                      </div>
+                      <div class="clear"></div>
+                  </div>
+              {% else %}
+                  Для данного города не создано правил!
+              {% endif %}
+          </div><!-- col -->
+          <div class="col-md-4">
+            {% include "sidebar.html" %}
+          </div>
+      </div><!-- row -->
+  </div><!-- container -->
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load staticfiles flatpages %}
+
+{% block main %}
+<!-- CONTENT -->
+<section class="section np-b cp" onClick="window.open('http://www.yota.ru');">
+    <div class="container-fluid">
+        <div class="jumbotron" style="background: url('{% static 'img/banner_for_main.png'%}') center center no-repeat;"></div>
+    </div><!-- container -->
+</section>
+
+<section class="section wrapp">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+            <ol class="breadcrumb">
+                <li><a href="/">Главная</a></li>
+                <li class="active">{{ flatpage.title }}</li>
+            </ol>
+        </div>
+      </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <!-- CONTENT TITLE -->
+                <div class="title">
+                    <h1>{{ flatpage.title }}</h1>
+                </div>
+
+                <!-- STREAM LIST -->
+                <div class="media-list">
+                    <br>
+                    <p>{{ flatpage.content }}</p>
+                </div>
+
+            </div><!-- col -->
+            <div class="col-md-4">
+              {% include "sidebar.html" %}
+            </div><!-- col -->
+        </div><!-- row -->
+    </div><!-- container -->
+</section>
+
+{% endblock %}
